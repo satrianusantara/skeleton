@@ -6,6 +6,21 @@ class Crud extends CI_Controller {
 		$this->load->view('tabel',array('data'=>$data));
 	}
 	public function tambah_data() {
-		echo "<h2>tambah data</h2>";
+		$this->load->view('form_tambah');
+	}
+
+	public function tambah() {
+		$id = $_POST['ID'];
+		$nama = $_POST['Name'];
+		$data_tambah = array(
+			'ID' => $id,
+			'Name' => $nama
+		);
+		$res = $this->mymodel->InsertCategory('category',$data_tambah);
+		if($res>=1){
+			redirect('crud/index');
+		}else{
+			echo "<h2> Tambah data gagal</h2>";
+		}
 	}
 }
