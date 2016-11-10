@@ -15,8 +15,8 @@
 			<td><?php echo $d['ID'];?></td>
 			<td><?php echo $d['Name'];?></td>
 			<td align="center">
-				<a href="#">Edit</a> ||
-				<a href="#">Delete</a>
+				<a href="<?php echo base_url()."index.php/crud/edit/".$d['ID'];?>">Edit</a> ||
+				<a href="<?php echo base_url()."index.php/crud/hapus/".$d['ID'];?>">Delete</a>
 			</td>
 		</tr>
 	<?php } ?>

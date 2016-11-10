@@ -1,9 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Mymodel extends CI_Model {
-	public function GetCategory() {
+	public function GetCategory($where="") {
 		//membuat variabel data untuk menampung pengambilan data pada database
-		$data = $this->db->query('select * from category');
+		$data = $this->db->query('select * from category '.$where);
 		//hasil dari data di simpan kembali ke resulr_array untuk nanti ditampilkan kembali
 		return $data->result_array();
 	}
