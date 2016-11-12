@@ -1,9 +1,10 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Data Category</title>
 </head>
 <body>
+	<?php echo "<h2>".$this->session->flashdata('pesan')."</h2>"?>
 	<table border = "1" style ="border-collapse: collapse; width: 50%;">
 		<tr style="background: gray;">
 			<th>ID</th>
